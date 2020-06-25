@@ -18,15 +18,16 @@
 		rootMargin: rootMargin || '0px 0px 256px 0px',
 		threshold: 0.01,
 		lazyImage: 'img[loading="lazy"]',
-		lazyIframe: 'iframe[loading="lazy"]'
+		lazyIframe: 'iframe[loading="lazy"]',
 	};
 
 	// Device/browser capabilities object
 	var capabilities = {
-		loading:
-			'loading' in HTMLImageElement.prototype &&
-			'loading' in HTMLIFrameElement.prototype,
-		scrolling: 'onscroll' in window
+		// loading:
+		// 	'loading' in HTMLImageElement.prototype &&
+		// 	'loading' in HTMLIFrameElement.prototype,
+		loading: false,
+		scrolling: 'onscroll' in window,
 	};
 
 	// Nodelist foreach polyfill / source: https://stackoverflow.com/a/46929259
